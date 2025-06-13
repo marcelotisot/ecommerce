@@ -11,7 +11,7 @@ import { environment } from 'src/config';
       username: environment.dbUsername,
       password: environment.dbPassword,
       database: environment.dbName,
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      autoLoadEntities: true,
       synchronize: true,  // No usar en producción
     }),
   ]
