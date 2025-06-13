@@ -16,9 +16,9 @@ Loaded modules:
 7FFD8B260000 win32u.dll
 7FFD8C670000 GDI32.dll
 7FFD8AED0000 gdi32full.dll
+000210040000 msys-2.0.dll
 7FFD8AB30000 msvcp_win.dll
 7FFD8B080000 ucrtbase.dll
-000210040000 msys-2.0.dll
 7FFD8C5A0000 advapi32.dll
 7FFD8B3F0000 msvcrt.dll
 7FFD8D260000 sechost.dll

@@ -18,6 +18,8 @@ export async function bootstrap() {
     }),
   );
 
+  app.enableCors();
+
   app.useGlobalFilters(new TypeORMExceptionFilter());
 
   await app.listen(environment.port);
