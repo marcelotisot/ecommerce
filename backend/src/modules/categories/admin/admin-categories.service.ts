@@ -7,15 +7,18 @@ import { PaginationDto } from '../../../common';
 
 @Injectable()
 export class AdminCategoriesService {
+
   constructor(
     @InjectRepository(Category)
     private readonly categoryRepository: Repository<Category>
   ) {}
 
   async create(createCategoryDto: CreateCategoryDto): Promise<Category> {
+
     const category = this.categoryRepository.create(createCategoryDto);
 
     return this.categoryRepository.save(category);
+
   }
 
   async findAll(paginationDto: PaginationDto) {
@@ -77,7 +80,6 @@ export class AdminCategoriesService {
     return this.categoryRepository.save(category);
 
   }
-
 
   async remove(id: string): Promise<{ message: string }> {
 

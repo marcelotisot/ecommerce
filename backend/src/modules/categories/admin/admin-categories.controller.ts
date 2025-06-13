@@ -1,10 +1,22 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Query, ParseUUIDPipe } from '@nestjs/common';
+import { 
+  Controller, 
+  Get, 
+  Post, 
+  Body, 
+  Patch, 
+  Param, 
+  Delete, 
+  Query, 
+  ParseUUIDPipe 
+} from '@nestjs/common';
+
 import { CreateCategoryDto, UpdateCategoryDto } from '../dto';
 import { AdminCategoriesService } from './admin-categories.service';
 import { PaginationDto } from '../../../common';
 
 @Controller('admin/categories')
 export class AdminCategoriesController {
+
   constructor(private readonly adminCategoriesService: AdminCategoriesService) {}
 
   @Post()
@@ -34,4 +46,5 @@ export class AdminCategoriesController {
   remove(@Param('id', ParseUUIDPipe) id: string) {
     return this.adminCategoriesService.remove(id);
   }
+  
 }
